@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<script type = "text/javascript">
+   
+      function validate() {
+        var password1=document.myForm.pass.value;  
+        var password2=document.myForm.conpass.value; 
+        
+       if (document.myForm.fullname.value=="")
+    {
+      document.getElementById('fn').innerHTML="**Enter fullname";
+      return false;
+    }
+
+    if (document.myForm.uname.value=="")
+    {
+      document.getElementById('un').innerHTML="**Enter Username";
+      return false;
+    }
+     if (document.myForm.email.value=="")
+    {
+      document.getElementById('em').innerHTML="**Enter Email";
+      return false;
+    }
+ if (document.myForm.phone.value=="")
+    {
+      document.getElementById('pn').innerHTML="**Enter Phone";
+      return false;
+    }
+ if (document.myForm.Place.value=="")
+    {
+      document.getElementById('pl').innerHTML="**Enter Place";
+      return false;
+    }
+
+ if (document.myForm.State.value=="")
+    {
+      document.getElementById('st').innerHTML="**Enter State";
+      return false;
+    }
+
+ if (document.myForm.pin.value=="")
+    {
+      document.getElementById('pi').innerHTML="**Enter Pin";
+      return false;
+    }
+
+ if (document.myForm.dob.value=="")
+    {
+      document.getElementById('do').innerHTML="**Enter Dob";
+      return false;
+    }
+ if (document.myForm.adhar.value=="")
+    {
+      document.getElementById('ad').innerHTML="**Enter Adhar";
+      return false;
+    }
+
+ if (document.myForm.pass.value=="")
+    {
+      document.getElementById('pa').innerHTML="**Enter Password";
+      return false;
+    }
+ if (document.myForm.conpass.value=="")
+    {
+      document.getElementById('cpa').innerHTML="**Enter Confirm password";
+      return false;
+    }
+ if (password1 != password2) {
+              alert ("\nPassword did not match: Please try again...");
+             return false;
+          }
+
+
+
+      }
+   
+</script>
+
+
+
+
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form name = "myForm" action="#" onsubmit = "return(validate());" method="POST"  enctype="multipart/form-data">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name <span id="fn" style="color:red;"></span></span>
+            <input type="text" placeholder="Enter your name" name="fullname">
+          </div>
+          <div class="input-box">
+            <span class="details">Username <span id="un" style="color:red;"></span></span> 
+            <input type="text" name="uname" placeholder="Enter your username" >
+          </div>
+          <div class="input-box">
+            <span class="details">Email <span id="em" style="color:red;"></span>
+            <input type="text" placeholder="Enter your email" name="email">
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number <span id="pn" style="color:red;"></span>
+            <input type="text" placeholder="Enter your number" name="phone">
+          </div>
+           <div class="input-box">
+            <span class="details">Place <span id="pl" style="color:red;"></span>
+            <input type="text" placeholder="Enter your number" name="Place" >
+          </div>
+           <div class="input-box">
+            <span class="details">State <span id="st" style="color:red;"></span>
+            <input type="text" placeholder="Enter your number" name="State">
+          </div>
+           <div class="input-box">
+            <span class="details">pin <span id="pi" style="color:red;"></span>
+            <input type="text" placeholder="Enter your pin number" name="pin">
+          </div>
+          <div class="input-box">
+            <span class="details">DOB <span id="do" style="color:red;"></span>
+            <input type="date" placeholder="Enter your DOB" name="dob">
+          </div>
+          <div class="input-box">
+            <span class="details">User Type</span>
+           
+<select class="input">
+            <option >Admin</option>
+            <option >User</option></select>
+
+          </div>
+          <div class="input-box">
+            <span class="details">Adhar Number <span id="ad" style="color:red;"></span>
+            <input type="text" placeholder="Enter your adhar number" name="adhar">
+          </div>
+          <div class="input-box">
+            <span class="details">Password <span id="pa" style="color:red;"></span>
+            <input type="text" placeholder="Enter your password" name="pass">
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password <span id="cpa" style="color:red;"></span>
+            <input type="text" placeholder="Confirm your password" name="conpass">
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Others</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
